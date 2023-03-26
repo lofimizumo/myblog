@@ -158,7 +158,7 @@ interface PageDocumentData {
  * Slice for *Page → Slice Zone*
  *
  */
-type PageDocumentDataSlicesSlice = ImageSlice | QuoteSlice | TextSlice | ContactFormSlice;
+type PageDocumentDataSlicesSlice = ImageSlice | QuoteSlice | TextSlice | ContactFormSlice | QaSlice;
 /**
  * Page document from Prismic
  *
@@ -346,6 +346,45 @@ type ImageSliceVariation = ImageSliceDefault | ImageSliceWide;
  */
 export type ImageSlice = prismicT.SharedSlice<"image", ImageSliceVariation>;
 /**
+ * Primary content in Qa → Primary
+ *
+ */
+interface QaSliceDefaultPrimary {
+    /**
+     * Description field in *Qa → Primary*
+     *
+     * - **Field Type**: Rich Text
+     * - **Placeholder**: A nice description of your feature
+     * - **API ID Path**: qa.primary.description
+     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+     *
+     */
+    description: prismicT.RichTextField;
+}
+/**
+ * Default variation for Qa Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: `Qa`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
+ *
+ */
+export type QaSliceDefault = prismicT.SharedSliceVariation<"default", Simplify<QaSliceDefaultPrimary>, never>;
+/**
+ * Slice variation for *Qa*
+ *
+ */
+type QaSliceVariation = QaSliceDefault;
+/**
+ * Qa Shared Slice
+ *
+ * - **API ID**: `qa`
+ * - **Description**: `Qa`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
+ *
+ */
+export type QaSlice = prismicT.SharedSlice<"qa", QaSliceVariation>;
+/**
  * Primary content in Quote → Primary
  *
  */
@@ -438,6 +477,6 @@ declare module "@prismicio/client" {
         (repositoryNameOrEndpoint: string, options?: prismic.ClientConfig): prismic.Client<AllDocumentTypes>;
     }
     namespace Content {
-        export type { ArticleDocumentData, ArticleDocumentDataSlicesSlice, ArticleDocument, NavigationDocumentData, NavigationDocumentDataLinksItem, NavigationDocument, PageDocumentData, PageDocumentDataSlicesSlice, PageDocument, SettingsDocumentData, SettingsDocument, AllDocumentTypes, ContactFormSliceDefault, ContactFormSliceVariation, ContactFormSlice, ImageSliceDefaultPrimary, ImageSliceDefault, ImageSliceWidePrimary, ImageSliceWide, ImageSliceVariation, ImageSlice, QuoteSliceDefaultPrimary, QuoteSliceDefault, QuoteSliceVariation, QuoteSlice, TextSliceDefaultPrimary, TextSliceDefault, TextSliceVariation, TextSlice };
+        export type { ArticleDocumentData, ArticleDocumentDataSlicesSlice, ArticleDocument, NavigationDocumentData, NavigationDocumentDataLinksItem, NavigationDocument, PageDocumentData, PageDocumentDataSlicesSlice, PageDocument, SettingsDocumentData, SettingsDocument, AllDocumentTypes, ContactFormSliceDefault, ContactFormSliceVariation, ContactFormSlice, ImageSliceDefaultPrimary, ImageSliceDefault, ImageSliceWidePrimary, ImageSliceWide, ImageSliceVariation, ImageSlice, QaSliceDefaultPrimary, QaSliceDefault, QaSliceVariation, QaSlice, QuoteSliceDefaultPrimary, QuoteSliceDefault, QuoteSliceVariation, QuoteSlice, TextSliceDefaultPrimary, TextSliceDefault, TextSliceVariation, TextSlice };
     }
 }

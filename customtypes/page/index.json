@@ -37,6 +37,9 @@
             },
             "contact_form": {
               "type": "SharedSlice"
+            },
+            "qa": {
+              "type": "SharedSlice"
             }
           }
         }
