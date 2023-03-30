@@ -64,7 +64,7 @@ const Qa = ({ slice }) => {
     try {
       console.log(inputValue)
       //call the api with the input value using a post request
-      const response = await fetch('http://127.0.0.1:5000/predict', {
+      const response = await fetch('https://37d8-2001-4479-8d03-4b00-69d5-c053-435-dfff.au.ngrok.io/predict', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
