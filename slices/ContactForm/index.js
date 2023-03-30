@@ -15,6 +15,7 @@ const InputField = ({
   type = "text",
   placeholder,
   required = true,
+  onChange, // Add the 'onChange' prop here
 }) => {
   return (
     <Field label={label}>
@@ -24,10 +25,12 @@ const InputField = ({
         required={required}
         placeholder={placeholder}
         className="w-full rounded-none border-b border-slate-200 py-3 pr-7 pl-3 text-slate-800 placeholder-slate-400"
+        onChange={onChange} // Pass the 'onChange' event handler to the 'input' element
       />
     </Field>
   );
 };
+
 
 const TextareaField = ({ label, name, placeholder, required = true }) => {
   return (
@@ -56,6 +59,7 @@ const ContactForm = () => {
           name="email"
           type="email"
           placeholder="jane.doe@example.com"
+          onChange={(e) => {alert('alert');}}
         />
         <TextareaField
           label="Message"
