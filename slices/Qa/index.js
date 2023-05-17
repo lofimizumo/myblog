@@ -45,7 +45,7 @@ const InputField = ({
 
 
 
-//add a function to call the api with the text from the input field as the question for the api
+//add a function to call the api with the text from the input field as the question for the api.
 
 
 
