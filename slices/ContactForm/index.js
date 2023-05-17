@@ -58,7 +58,7 @@ const ContactForm = () => {
           label="Email Address"
           name="email"
           type="email"
-          placeholder="jane.doe@example.com"
+          placeholder="yourname@example.com"
           onChange={(e) => {alert('alert');}}
         />
         <TextareaField
