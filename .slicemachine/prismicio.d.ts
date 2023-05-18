@@ -204,28 +204,6 @@ interface SettingsDocumentData {
      *
      */
     profilePicture: prismicT.ImageField<never>;
-    /**
-     * Newsletter Description field in *Settings*
-     *
-     * - **Field Type**: Rich Text
-     * - **Placeholder**: Text above the sign up form
-     * - **API ID Path**: settings.newsletterDescription
-     * - **Tab**: Main
-     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
-     *
-     */
-    newsletterDescription: prismicT.RichTextField;
-    /**
-     * Newsletter Disclaimer field in *Settings*
-     *
-     * - **Field Type**: Rich Text
-     * - **Placeholder**: Small text below sign up form
-     * - **API ID Path**: settings.newsletterDisclaimer
-     * - **Tab**: Main
-     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
-     *
-     */
-    newsletterDisclaimer: prismicT.RichTextField;
 }
 /**
  * Settings document from Prismic

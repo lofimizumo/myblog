@@ -5,7 +5,7 @@
       {
         "type": "heading1",
         "content": {
-          "text": "Moving"
+          "text": "Promised"
         }
       }
     ]
@@ -16,7 +16,7 @@
       {
         "type": "paragraph",
         "content": {
-          "text": "Eu dolore veniam amet do cupidatat Lorem. Nostrud excepteur anim deserunt labore minim sint aliquip in."
+          "text": "Anim exercitation sit sit Lorem aliqua mollit Lorem incididunt aliqua reprehenderit cupidatat eu do dolore. Dolor nisi est irure cupidatat aliquip occaecat cupidatat exercitation tempor pariatur id laborum adipisicing magna eiusmod. Mollit incididunt sunt aliqua labore est ad ad sunt sit minim enim."
         }
       }
     ]
@@ -25,43 +25,21 @@
     "__TYPE__": "ImageContent",
     "origin": {
       "id": "main",
-      "url": "https://images.unsplash.com/photo-1600804931749-2da4ce26c869",
-      "width": 3199,
-      "height": 3199
+      "url": "https://images.unsplash.com/photo-1589652717521-10c0d092dea9",
+      "width": 4752,
+      "height": 3168
     },
-    "url": "https://images.unsplash.com/photo-1600804931749-2da4ce26c869?rect=0%2C0%2C3199%2C3199&w=2000&h=2000",
+    "url": "https://images.unsplash.com/photo-1589652717521-10c0d092dea9?rect=792%2C0%2C3168%2C3168&w=2000&h=2000",
     "width": 2000,
     "height": 2000,
     "edit": {
       "zoom": 1,
       "crop": {
-        "x": 0,
+        "x": 792,
         "y": 0
       },
       "background": "transparent"
     },
     "thumbnails": {}
-  },
-  "newsletterDescription": {
-    "__TYPE__": "StructuredTextContent",
-    "value": [
-      {
-        "type": "paragraph",
-        "content": {
-          "text": "Veniam fugiat dolor consequat velit eiusmod labore consequat aute mollit qui."
-        }
-      }
-    ]
-  },
-  "newsletterDisclaimer": {
-    "__TYPE__": "StructuredTextContent",
-    "value": [
-      {
-        "type": "paragraph",
-        "content": {
-          "text": "Irure sint elit reprehenderit laboris reprehenderit consequat eu eiusmod incididunt excepteur eu voluptate tempor. Qui ut ut excepteur culpa ut veniam deserunt aliquip id adipisicing aliqua fugiat ad."
-        }
-      }
-    ]
   }
 }
