@@ -107,9 +107,7 @@ const Qa = ({ slice }) => {
       <Field label="You asked:">
         <p className="text-slate-800">{inputValue}</p>
       </Field>
-      <Field label="Answers:">
-        <p className="text-slate-800">{apiResult}</p>
-      </Field>
+
       {posterUrl && (
         <div className="w-40 h-60 mb-4 mx-auto">
           <img src={posterUrl} alt="Movie poster" className="w-full h-full object-contain" />
