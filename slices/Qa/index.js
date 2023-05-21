@@ -54,6 +54,7 @@ const Qa = ({ slice }) => {
   const [movieName, setMovieName] = useState('');
   const [posterUrl, setPosterUrl] = useState(null);
   const [apiResult, setApiResult] = useState('');
+  const [loading, setLoading] = useState(false);
 
   const handleInputChange = (e) => {
 
@@ -61,9 +62,8 @@ const Qa = ({ slice }) => {
   };
 
   const handleClick = async () => {
+    setLoading(true);
     try {
-      console.log(inputValue)
-      //call the api with the input value using a post request
       const response = await fetch('https://ded0-2001-4479-8e00-ea00-8ce7-7b1a-1f76-5f94.ngrok-free.app/predict', {
         method: 'POST',
         headers: {
@@ -72,11 +72,12 @@ const Qa = ({ slice }) => {
         body: JSON.stringify({ input_question: inputValue }),
       });
       const data = await response.json();
-      console.log(data)
       setApiResult(data.answer);
-      setMovieName(data.movie_name)
+      setMovieName(data.movie_name);
     } catch (error) {
       console.log(error);
+    } finally {
+      setLoading(false);
     }
   };
 
@@ -114,6 +115,13 @@ const Qa = ({ slice }) => {
           <img src={posterUrl} alt="Movie poster" className="w-full h-full object-contain" />
         </div>
       )}
+      <Field label="Answers:">
+        {loading ? (
+          <p className="text-slate-800">Waiting for response...</p>
+        ) : (
+          <p className="text-slate-800">{apiResult}</p>
+        )}
+      </Field>
       <button
         className="bg-slate-500 hover:bg-slate-700 text-white font-bold py-2 px-4 rounded"
         onClick={handleClick}
